@@ -10,19 +10,19 @@
                 <a href="#" class="nav-link active">
                     <i class="nav-icon fas fa-tachometer-alt"></i>
                     <p>
-                        Projects
+                        Clients
                         <i class="right fas fa-angle-left"></i>
                     </p>
                 </a>
                 <ul class="nav nav-treeview">
                     <?php
-                    foreach ($projects as $result) {
+                    foreach ($clients as $result) {
                         ?>
                         <li class="nav-item">
-                            <a href="index.php?id=<?= $result->getId() ?>" class="nav-link">
+                            <a href="index.php?Id_client=<?= $result->GetID() ?>" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>
-                                    <?= $result->getName() ?>
+                                    <?= $result->Getnom() ?>
                                 </p>
                             </a>
                         </li>
@@ -35,7 +35,7 @@
                     <li class="nav-item">
                         <a href="../services/index.php" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
-                            <p class="">All Projects</p>
+                            <p class="">All Clients</p>
                         </a>
                     </li>
                 </ul>
@@ -50,13 +50,13 @@
                 #
             </th>
             <th style="width: 20%">
-                Task Name
+                service Name
             </th>
             <th class="text-center" style="width: 50%">
-                Description
+                type
             </th>
             <th style="width: 8%" class="text-center">
-                Status
+                price
             </th>
             <th style="width: 20%">
                 Actions
@@ -79,23 +79,27 @@
                 ?>
                 <tr>
                     <td>
-                        <?= $result->getId() ?>
+                        <?= $result->GetID() ?>
                     </td>
                     <td>
                         <a>
-                            <?= $result->getName() ?>
+                            <?= $result->Getnom() ?>
                         </a>
                     </td>
                     <td>
-                        <?= $result->getDescription() ?>
+                        <?= $result->GetType() ?>
+
+                    </td>
+                    <td>
+                        <?= $result->GetPrice() ?>
                     </td>
                 
                     <td class="project-actions">
-                        <a class="btn btn-info btn-sm" href="editer.php?id=<?= $result->getId() ?>">
+                        <a class="btn btn-info btn-sm" href="editer.php?Id_srvice=<?= $result->GetID() ?>">
                             <i class="fas fa-pencil-alt"></i>
                             Edit
                         </a>
-                        <a class="btn btn-danger btn-sm" href="supprimer.php?id=<?= $result->getId() ?>">
+                        <a class="btn btn-danger btn-sm" href="supprimer.php?Id_srvice=<?= $result->GetID() ?>">
                             <i class="fas fa-trash"></i>
                             Delete
                         </a>

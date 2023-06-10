@@ -34,7 +34,7 @@ include_once(__ROOT__ . "/Views/Layout/head.php");
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active">Tasks</li>
+                                <li class="breadcrumb-item active">Services</li>
                             </ol>
                         </div>
                     </div>
@@ -44,7 +44,7 @@ include_once(__ROOT__ . "/Views/Layout/head.php");
                 <!-- Default box -->
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">Tasks</h3>
+                        <h3 class="card-title">Services</h3>
                         <div class="card-tools">
                             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
                                 <i class="fas fa-minus"></i>
@@ -59,12 +59,12 @@ include_once(__ROOT__ . "/Views/Layout/head.php");
                             <div class="col-sm-12 col-md-6">
                                 <div id="search_task" class="dataTables_filter"><input type="search" id="search_task"
                                         class="form-control" placeholder="Task name" aria-controls="search_task">
-                                    <input type="hidden" value="<?= $id ?>" id="id">
+                                    <input type="hidden" value="<?= $id ?>" id="Id_srvice">
                                 </div>
                             </div>
                         </div>
                         <div id="result" class="p-3">
-                            <?php include_once(__ROOT__ . "/Views/tasks/index.data.php") ?>
+                            <?php include_once(__ROOT__ . "/Views/services/index.data.php") ?>
                         </div>
                     </div>
                     <!-- /.card-body -->

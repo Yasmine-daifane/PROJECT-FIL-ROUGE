@@ -46,7 +46,7 @@
                         <?= $result->Getemail() ?>
                     </td>
                     <td class="client-actions">
-                        <a class="btn btn-primary btn-sm" href="../../Controller/client/index.php?Id_client=<?= $result->GetID() ?>">
+                        <a class="btn btn-primary btn-sm" href="../../Controller/service/index.php?=Id_srvice<?= $result->GetID() ?>">
                             <i class="fas fa-folder"></i>
                             View
                         </a>

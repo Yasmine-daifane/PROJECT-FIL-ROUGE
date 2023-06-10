@@ -1,184 +1,127 @@
 -- phpMyAdmin SQL Dump
-
 -- version 5.2.0
-
 -- https://www.phpmyadmin.net/
-
 --
-
 -- Hôte : 127.0.0.1
-
--- Généré le : mar. 09 mai 2023 à 23:21
-
+-- Généré le : sam. 10 juin 2023 à 19:57
 -- Version du serveur : 10.4.27-MariaDB
-
 -- Version de PHP : 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-
 START TRANSACTION;
-
 SET time_zone = "+00:00";
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */
 
-;
-
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */
-
-;
-
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */
-
-;
-
-/*!40101 SET NAMES utf8mb4 */
-
-;
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
-
 -- Base de données : `prototype-fil-rouge`
-
 --
 
 -- --------------------------------------------------------
 
 --
-
--- Structure de la table `project`
-
+-- Structure de la table `client`
 --
 
-CREATE TABLE
-    `project` (
-        `Id_Project` int(11) NOT NULL,
-        `name` varchar(50) NOT NULL,
-        `description` varchar(500) NOT NULL
-    ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_general_ci;
+CREATE TABLE `client` (
+  `Id_client` int(11) NOT NULL,
+  `nom` varchar(100) NOT NULL,
+  `email` varchar(200) NOT NULL,
+  `password` varchar(1000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
-
--- Déchargement des données de la table `project`
-
+-- Déchargement des données de la table `client`
 --
 
-INSERT INTO
-    `project` (
-        `Id_Project`,
-        `name`,
-        `description`
-    )
-VALUES (
-        1,
-        'E-commerce website',
-        ' Build an online store where users can browse products, add them to their cart, and checkout securely. The website should also have a dashboard for the store owner to manage orders, products, and customers.'
-    ), (
-        2,
-        'Weather app',
-        'Develop a weather application that displays current weather conditions, forecasts, and alerts for a selected location. The app should allow users to save their favorite locations and receive notifications for severe weather events.'
-    ), (
-        3,
-        'Fitness tracker',
-        'Create a fitness tracking application that allows users to log workouts, track their progress, and set goals. The app should have a user-friendly interface and be able to sync with wearable devices like smartwatches.'
-    ), (
-        4,
-        'Recipe sharing platform',
-        'Build a social media platform where users can share their favorite recipes, follow other users, and save recipes to their personal collections. The platform should have features like ratings and comments to help users discover new recipes and connect with other food enthusiasts.'
-    );
+INSERT INTO `client` (`Id_client`, `nom`, `email`, `password`) VALUES
+(2, 'kamilaaaaa', 'kamila@gmail.com', '$2y$10$AyEUZk7MZW4q/MESDbb5..hVLy61v3tXXkKzg5sEadFhUZ2L7vxpm'),
+(3, 'oranos', 'oranos@gmail.com', '$2y$10$MuF3MOn0Y7yyC0zpDlBrSesZ10EXAD4TABBq0qvwCtuooqKo2RUTq'),
+(4, 'hicham', 'hicham@gmail.com', '$2y$10$Z1Tll36CX2EdDEJh9fcMIO69/lavgNTpO9B.54NlKOmsGM6Ful2EC'),
+(5, 'yasin', 'yasin@gmail.com', '$2y$10$LjS0XMxWLSEraLlv1UsSTukEtHX3c56XcUJs6OcFSaqcBuNdj9Vee'),
+(6, 'chiha', 'chiha@gmail.com', '$2y$10$w/aSWMXoWVb5Tbjtqa7CzucfEMgMDHk.YJq99tGHW5xmiILR4pXvO'),
+(7, 'talib', 'talib@gmail.com', '$2y$10$qH7EjjYSigJ8msum5Jx.ZuApct6WFEIMkkoMb1GkOiITcYUFwGB.e'),
+(8, 'jamal', 'jamal@gmail.com', '$2y$10$AZ6YQvrgnC/KbF.HQ7k81.Edbn4W8brsY/W3TbUhF4n5Zw1fxO0L2'),
+(9, 'milodi', 'milodi@gmail.com', '$2y$10$u8SbYN7Pubo1gp4PodBuwOrN1/njz1v4kExA5N2RDrdoq7mVqoYXC'),
+(10, 'nano', 'milodi@gmail.com', '$2y$10$Mbd3zHX3q/d5rlA2qaoBLub9L/Zbobf8Bsphhd9EKxnk7SpLvVHYa'),
+(11, 'jamal', 'jamal@gmail.com', '$2y$10$hXIpvZGHMjwfau8/HpJBKuxbRfQ2uadvgzMDKWs5VnsaIpt0Mm6fW'),
+(12, 'ploma', 'ploma@gmail.com', '$2y$10$fCsUouoYLUNFfRZEuW.i1u8BRtD3M7XlHLBOiazTnbBKBwcg78enu'),
+(13, 'tiji', 'tiji@gmail.com', '$2y$10$sEASqal4gW5VUYpOqTi8ru2dX4tzItTvnPTtwA1XcVKJ42SiZCzZe'),
+(14, 'naomi', 'naomi@gmail.com', '$2y$10$1cQEZd4ka/qTblfelhMCeOV.Q/1PiBbg62r57MgB8BbAPHbWqcjZG'),
+(19, 'zozo', 'zooooo', ''),
+(20, 'postoiler', 'noo', '');
 
 -- --------------------------------------------------------
 
 --
-
--- Structure de la table `task`
-
+-- Structure de la table `services`
 --
 
-CREATE TABLE
-    `task` (
-        `Id_Task` int(11) NOT NULL,
-        `name` varchar(50) NOT NULL,
-        `description` varchar(500) DEFAULT NULL,
-        `Id_Project` int(11) NOT NULL
-    ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_general_ci;
+CREATE TABLE `services` (
+  `Id_srvice` int(11) NOT NULL,
+  `type` varchar(500) NOT NULL,
+  `price` int(11) NOT NULL,
+  `nom` varchar(200) NOT NULL,
+  `Id_client` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
+-- Déchargement des données de la table `services`
+--
 
+INSERT INTO `services` (`Id_srvice`, `type`, `price`, `nom`, `Id_client`) VALUES
+(3, 'sell', 40, 'hfhhhf', 2),
+(4, 'sell', 30, 'hhh', 3),
+(5, 'sell', 40, 'hhh', 14);
+
+--
 -- Index pour les tables déchargées
-
 --
 
 --
-
--- Index pour la table `project`
+-- Index pour la table `client`
+--
+ALTER TABLE `client`
+  ADD PRIMARY KEY (`Id_client`);
 
 --
-
-ALTER TABLE `project` ADD PRIMARY KEY (`Id_Project`);
+-- Index pour la table `services`
+--
+ALTER TABLE `services`
+  ADD PRIMARY KEY (`Id_srvice`),
+  ADD KEY `Id_client` (`Id_client`);
 
 --
-
--- Index pour la table `task`
-
---
-
-ALTER TABLE `task`
-ADD PRIMARY KEY (`Id_Task`),
-ADD
-    KEY `Id_Project` (`Id_Project`);
-
---
-
 -- AUTO_INCREMENT pour les tables déchargées
-
 --
 
 --
-
--- AUTO_INCREMENT pour la table `project`
+-- AUTO_INCREMENT pour la table `client`
+--
+ALTER TABLE `client`
+  MODIFY `Id_client` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
-
-ALTER TABLE
-    `project` MODIFY `Id_Project` int(11) NOT NULL AUTO_INCREMENT,
-    AUTO_INCREMENT = 5;
+-- AUTO_INCREMENT pour la table `services`
+--
+ALTER TABLE `services`
+  MODIFY `Id_srvice` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
-
--- AUTO_INCREMENT pour la table `task`
-
---
-
-ALTER TABLE
-    `task` MODIFY `Id_Task` int(11) NOT NULL AUTO_INCREMENT;
-
---
-
 -- Contraintes pour les tables déchargées
-
 --
 
 --
-
--- Contraintes pour la table `task`
-
+-- Contraintes pour la table `services`
 --
- 
-ALTER TABLE `task`
-ADD
-    CONSTRAINT `task_ibfk_1` FOREIGN KEY (`Id_Project`) REFERENCES `project` (`Id_Project`) ON DELETE CASCADE;
-
+ALTER TABLE `services`
+  ADD CONSTRAINT `services_ibfk_1` FOREIGN KEY (`Id_client`) REFERENCES `client` (`Id_client`);
 COMMIT;
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */
-
-;
-
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */
-
-;
-
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */
-
-;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

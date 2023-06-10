@@ -3,8 +3,8 @@ include "../../Views/Layout/root.php";
 require_once(__ROOT__ . '/Managers/GestionClient.php');
 $GestionClients = new GestionClients();
 
-if (isset($_GET['id'])) {
-    $client = $GestionClient->RechercherParId($_GET['id']);
+if (isset($_GET['Id_client'])) {
+    $client = $GestionClients->RechercherParId($_GET['Id_client']);
 }
 
 if (isset($_POST['modifier'])) {

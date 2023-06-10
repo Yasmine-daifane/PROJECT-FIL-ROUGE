@@ -62,7 +62,7 @@ include_once(__ROOT__ . "/Views/Layout/head.php");
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <input type="hidden" required="required" class="form-control" id="Id" name="Id"
+                                    <input type="hidden" required="required" class="form-control" id="Id_client" name="Id_client"
                                         value=<?php echo $client->GetID() ?>>
                                     <div class="form-group">
                                         <label for="inputName">Client Name</label>

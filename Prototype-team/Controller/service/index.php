@@ -1,9 +1,9 @@
 <?php
 include "../../Views/Layout/root.php";
-if (isset($_GET['Id_srvice'])) {
-    $id = $_GET['Id_srvice'];
+if (isset($_GET['Id_client'])) {
+    $id = $_GET['Id_client'];
 } else {
-    $id = $_POST['Id_srvice'];
+    $id = $_POST['Id_client'];
 }
 // echo $id;
 require_once(__ROOT__ . '/Managers/GestionService.php');

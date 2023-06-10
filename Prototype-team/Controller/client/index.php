@@ -23,7 +23,7 @@ if (isset($_POST['Query'])) {
     $Query = "";
 }
 
-$results = $gestionProjet->rechercherParNom($Query);
+$results = $GestionClient->rechercherParNom($Query);
 
 $itemsPerPage = 6;
 $totalItems = count($results);

@@ -1,7 +1,6 @@
 <?php
-define('__ROOT__', dirname(dirname(dirname(__FILE__))));
-
-include_once(__ROOT__ . '/Managers/GestionClient.php');
+include "../../Views/Layout/root.php";
+require_once(__ROOT__ . '/Managers/GestionClient.php');
 $GestionClients = new GestionClients();
 
 if (isset($_GET['id'])) {

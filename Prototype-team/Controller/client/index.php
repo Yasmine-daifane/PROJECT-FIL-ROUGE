@@ -3,7 +3,7 @@
 include "../../Views/Layout/root.php";
 require_once(__ROOT__ . '/Managers/GestionClient.php');
 
-$gestionProjet = new GestionClients();
+$GestionClient = new GestionClients();
 $IsAjaxRequest = false;
 // $Query = "";
 
@@ -29,7 +29,7 @@ $itemsPerPage = 6;
 $totalItems = count($results);
 $pagesNum = ceil($totalItems / $itemsPerPage);
 
-$pages = $gestionProjet->pages($results, $pagesNum, $itemsPerPage);
+$pages = $GestionClient->pages($results, $pagesNum, $itemsPerPage);
 
 // View
 

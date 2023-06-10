@@ -106,7 +106,7 @@ class GestionClients
     {
         // Requête SQL
         $sql = "UPDATE client SET 
-        name='$nom', email='$email'
+        nom='$nom', email='$email'
         WHERE Id_client= $id";
         //  
         mysqli_query($this->getConnection(), $sql);

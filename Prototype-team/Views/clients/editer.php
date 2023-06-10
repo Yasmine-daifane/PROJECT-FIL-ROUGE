@@ -9,7 +9,7 @@ include_once(__ROOT__ . "/Views/Layout/head.php");
         <!-- Preloader -->
         <?php
         // include "Views/Layout/preloader.php";
-        include_once(__ROOT__ . "/Views/Layout/preloader.php");
+        // include_once(__ROOT__ . "/Views/Layout/preloader.php");
 
         ?>
         <!-- Navbar -->
@@ -33,7 +33,7 @@ include_once(__ROOT__ . "/Views/Layout/head.php");
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1>Client Add</h1>
+                            <h1>Client Edite</h1>
                         </div>
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
